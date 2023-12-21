@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BookMark</title>
+  </head>
+  <body>
+    <main class="w-75 mx-auto">
+      <h1 class="bookmark mx-auto px-2 my-5">Bookmarker</h1>
+
+      <div class="separator"></div>
+
+      <div class="book-your-site text-center my-3">
+        <i class="fa fa-bookmark fs-3"></i>
+        <h3 class="px-1 mt-2">Bookmark your favorite sites</h3>
+        <i class="fa fa-bookmark fs-3"></i>
+      </div>
+
+      <form>
+        <div>
+          <label for="bookmarkName">
+            <i class="fa fa-book-bookmark"></i>
+            <span class="fw-bold ps-2">Site Name</span>
+          </label>
+          <input
+            type="text"
+            placeholder="Bookmark Name"
+            class="form-control mt-2"
+            id="bookmarkName"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="siteURL">
+            <i class="fa fa-link"></i>
+            <span class="fw-bold ps-2">Site URL</span>
+          </label>
+          <input
+            type="text"
+            placeholder="Website URL"
+            class="form-control mt-2"
+            id="siteURL"
+          />
+        </div>
+
+        <div class="text-center mt-4">
+          <button class="btn btn-danger px-5" id="addSiteBtn" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div class="separator mt-5"></div>
+
+      <table class="table table-light mt-3 text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+    </main>
+
+    <div id="validationAlert">
+      <div class="bg-white p-3 rounded-2 shadow-lg alert-holder">
+        <div class="d-flex justify-content-between">
+          <div class="dots">
+            <span class="rounded-circle"></span>
+            <span class="rounded-circle"></span>
+            <span class="rounded-circle"></span>
+          </div>
+          <i class="fa fa-xmark fs-3" id="alertExit"></i>
+        </div>
+        <p class="lead mt-4">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            <i class="fa fa-arrow-circle-right pe-2"></i>Site name must contain
+            at least 3 characters
+          </li>
+          <li>
+            <i class="fa fa-arrow-circle-right pe-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

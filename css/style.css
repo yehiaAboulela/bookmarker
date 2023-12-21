@@ -1,0 +1,105 @@
+body {
+  background-color: #f7ecde !important;
+  font-family: "PT Sans Caption", sans-serif;
+}
+*::selection {
+  background-color: #fec260;
+}
+.bookmark {
+  width: fit-content;
+  font-family: "Pacifico", cursive;
+  position: relative;
+  font-size: 3rem;
+  cursor: default;
+}
+
+.bookmark::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #fec260;
+  z-index: -1;
+  transition: height 0.3s;
+}
+
+.bookmark:hover::after {
+  height: 40px;
+}
+
+.separator {
+  border-bottom: 2px dotted black;
+}
+
+.book-your-site {
+  font-family: "Righteous", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b2ac49;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem #b2ad4950;
+}
+#tableBody tr > * {
+  vertical-align: middle;
+}
+.visit-btn {
+  background-color: #b2ac49;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.visit-btn:hover {
+  background-color: #858138;
+  color: white;
+}
+
+.delete-Btn {
+  background-color: #eb1d36;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+.delete-Btn:hover {
+  background-color: #c51a2e;
+  color: white;
+}
+
+#validationAlert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.26);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.alert-active {
+  display: flex !important;
+}
+.alert-holder {
+  width: 500px;
+}
+.dots span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.dots span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.dots span:nth-child(2) {
+  background-color: #febe2e;
+}
+.dots span:nth-child(3) {
+  background-color: #4db748;
+}
+
+#alertExit {
+  cursor: pointer;
+}
